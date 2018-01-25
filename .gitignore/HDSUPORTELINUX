@@ -9,7 +9,7 @@ if [[ $userV == root ]]; then
 	echo "##                                                           ##";
 	echo "##            Script Instalação Programas Linux              ##";                         
 	echo "##                                                           ##";
-	echo "##                                 latam-infra@endurance.com ##";
+	echo "##                                 IT-LATAM HELPDESK TEAM    ##";
 	echo "###############################################################";
 
 	sleep 3;
@@ -185,6 +185,12 @@ if [[ $userV == root ]]; then
 		##Instala Copyq
 		apt install copyq
 		echo;
+		##instala Spotify
+		apt-add-repository -y "deb http://repository.spotify.com stable non-free" &&
+        apt-key adv --keyserver keyserver.ubuntu.com --recv-keys D2C19886 &&
+        apt-get update -qq &&
+        apt-get install spotify-client
+        echo;
 	}
 
 		##Mostra o menu de escolha para o usuario
