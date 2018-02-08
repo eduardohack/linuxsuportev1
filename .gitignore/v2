@@ -97,7 +97,17 @@ if [[ $userV == root ]]; then
 		add-apt-repository --yes ppa:hluk/copyq
 		apt-get update;
 		instalaCopyq;
+		}
+	instalaTRACEROUT(){
+		apt-get update && apt-get install traceroute;
 	}
+	instalaWHOIS(){
+		apt-get install whois;
+	}
+	instalaVIM(){
+		apt-get install vim --force-yes;
+	}
+	
 	instalaMySqlClient(){
 		apt-get install mysql-client;
 	}
