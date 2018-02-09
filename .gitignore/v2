@@ -105,7 +105,7 @@ if [[ $userV == root ]]; then
 		apt-get install whois;
 	}
 	instalaVIM(){
-		apt-get install vim --force-yes;
+		apt-get install vim -y --force-yes;
 	}
 	
 	instalaMySqlClient(){
