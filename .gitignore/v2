@@ -56,13 +56,6 @@ if [[ $userV == root ]]; then
 		apt-get install hipchat4;
 		echo;
 	}
-	Hipchat(){
-		##Adiciona os Repositórios necessários para instalação do HipChat:
-		sh -c 'echo "deb https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client $(lsb_release -c -s) main" > /etc/apt/sources.list.d/atlassian-hipchat4.list';
-		wget -O - https://atlassian.artifactoryonline.com/atlassian/api/gpg/key/public | apt-key add -;
-		apt-get update;
-		instalaHipchat;
-	}
 	instalaRemmina(){
 		##Instala Remmina
 		apt-get install remmina remmina-plugin-rdp libfreerdp-plugins-standard;
@@ -154,10 +147,6 @@ if [[ $userV == root ]]; then
 		
 		##Adiciona os repostórios necessários para a instalação do Linphone:
 		add-apt-repository --yes ppa:linphone/release
-
-		##Adiciona os Repositórios necessários para instalação do HipChat:
-		sudo sh -c 'echo "deb https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client $(lsb_release -c -s) main" > /etc/apt/sources.list.d/atlassian-hipchat4.list';
-		wget -O - https://atlassian.artifactoryonline.com/atlassian/api/gpg/key/public | apt-key add -;
 
 		##Adiciona os repositorios para o remmina
 		add-apt-repository --yes ppa:remmina-ppa-team/remmina-next
